@@ -9,7 +9,7 @@
   orginal img data subscribing / publish inference results
   create child thread for camera input / inference (TensorRT optimized SSD) while main thread drawing detection results and displaying video
 
-(4) function:
+(4) methods:
   parse_args(): parse input arguments.
   
   class TrtThread(threading.Thread): It implements the child thread (read images from cam to TRT inferencing). The child thread stores the input image and detectino results (global & condition variable)
@@ -26,4 +26,15 @@
   duplicate_box_removal(bbox): remove bbox for same object, 
   
   
-  
+  2. object3d_detecter
+   (1) pkg: object3d_detecter
+   
+   (2) type: object3d_detecter
+
+   (3) task: 
+
+   (4) methods:
+     class Object3dDetector: publisher / subscriber
+     void Object3dDetector::pointCloudCallback: extractCluster, classify
+     extractCluster: pc_indices의 거리와 range를 비교해서 범위에 들면 indices_array 에 push
+     
