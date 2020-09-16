@@ -35,11 +35,10 @@
 
    (4) methods:
      class Object3dDetector: publisher / subscriber
-     
      void Object3dDetector::pointCloudCallback: extractCluster, classify
      
-     extractCluster: pc_indices(from lidar)의 거리와 range를 비교해서 범위에 들면 indices_array 에 push (space divde)
+   extractCluster: pc_indices(from lidar)의 거리와 range를 비교해서 범위에 들면 indices_array 에 push (space divde)
      
-     cluster_size min, max 설정후 clustering, set(calculate) width, height, centroid. And limit size(?) 
+   cluster_size min, max 설정후 clustering, set(calculate) width, height, centroid. And limit size(?) 
       
-     classify: marking (color)
+   classify: marking (color)
